@@ -8,8 +8,19 @@ public class Main {
         System.out.println(mensaje);
         System.out.println("La suma es: " + suma(5,8));
         alerta("Esto es un mensaje de prueba");
-    }
+        /*
+        Utilizacion de la clase math
 
+         */
+        double operador1=25.5;
+        double operador2=15.21;
+        System.out.println(Math.ceil(operador1)); 
+        System.out.println(Math.floor(operador2));
+        System.out.println(Math.pow(operador1, operador2));
+        System.out.println(Math.max(operador1, operador2));
+        System.out.println(Math.sqrt(operador1));
+
+    }
     public static String saludar( String nombre){
         return "Hola, como estas " + nombre;
     }
