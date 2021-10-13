@@ -10,7 +10,6 @@ public class Main {
         alerta("Esto es un mensaje de prueba");
         /*
         Utilizacion de la clase math
-
          */
         double operador1=25.5;
         double operador2=15.21;
@@ -20,6 +19,18 @@ public class Main {
         System.out.println(Math.max(operador1, operador2));
         System.out.println(Math.sqrt(operador1));
         System.out.println(Math.PI);
+
+        /*
+        Operaciones basicas con los mensajes
+         */
+        String mensajeDos = "Hola";
+        String mensajeTres = "Adiós!!!";
+        System.out.println("Numero de caracteres" + mensajeDos.length());
+        System.out.println(mensajeDos.compareTo(mensajeTres));
+        System.out.println(mensajeDos.equals(mensajeTres));
+        mensajeDos = "Adiós!!!";
+        System.out.println(mensajeDos.equalsIgnoreCase(mensajeTres));
+
 
     }
     public static String saludar( String nombre){
