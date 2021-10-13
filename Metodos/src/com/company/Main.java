@@ -14,11 +14,12 @@ public class Main {
          */
         double operador1=25.5;
         double operador2=15.21;
-        System.out.println(Math.ceil(operador1)); 
+        System.out.println(Math.ceil(operador1));
         System.out.println(Math.floor(operador2));
         System.out.println(Math.pow(operador1, operador2));
         System.out.println(Math.max(operador1, operador2));
         System.out.println(Math.sqrt(operador1));
+        System.out.println(Math.PI);
 
     }
     public static String saludar( String nombre){
