@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
 
@@ -29,5 +30,35 @@ public class Main {
         /*
           *No puede contener elementos duplicados
          */
+        frutas.add("Mango");
+        frutas.add("Fresa");
+        frutas.add("Pera");
+        frutas.add("Uva");
+        frutas.add("Melon");
+        frutas.add("Lima");
+        frutas.add("Mango");
+
+        for (String fruta : frutas){
+            System.out.println(fruta);
+        }
+
+        /*
+        Uso de TreeSet
+        Es mas lento que el hashset
+        Ordena los elementos
+         */
+        System.out.println("--------------------------------");
+        Set<String> frutasDos = new TreeSet<>();
+        frutasDos.add("Mango");
+        frutasDos.add("Fresa");
+        frutasDos.add("Pera");
+        frutasDos.add("Uva");
+        frutasDos.add("Melon");
+        frutasDos.add("Lima");
+        frutasDos.add("Mango");
+
+        for (String fruta : frutasDos){
+            System.out.println(fruta);
+        }
     }
 }
