@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -25,6 +26,7 @@ public class Main {
         /*
         Uso de colecciones
          */
+        System.out.println("Uso de HashSet");
         Set<String> frutas = new HashSet<>();
         //Caracteristicas principales de set
         /*
@@ -48,6 +50,7 @@ public class Main {
         Ordena los elementos
          */
         System.out.println("--------------------------------");
+        System.out.println("Uso de TreeSet");
         Set<String> frutasDos = new TreeSet<>();
         frutasDos.add("Mango");
         frutasDos.add("Fresa");
@@ -58,6 +61,25 @@ public class Main {
         frutasDos.add("Mango");
 
         for (String fruta : frutasDos){
+            System.out.println(fruta);
+        }
+                /*
+        Uso de LinkedHashSet
+        Mas costosa que hasSet
+        Almacena los valores en orden de inserción
+         */
+        System.out.println("--------------------------------");
+        System.out.println("Uso de LinkedHashSet");
+        Set<String> frutasTres = new LinkedHashSet<>();
+        frutasTres.add("Mango");
+        frutasTres.add("Fresa");
+        frutasTres.add("Pera");
+        frutasTres.add("Uva");
+        frutasTres.add("Melon");
+        frutasTres.add("Lima");
+        frutasTres.add("Mango");
+
+        for (String fruta : frutasTres){
             System.out.println(fruta);
         }
     }
