@@ -122,5 +122,19 @@ public class Main {
             System.out.println(fruta);
         }
 
+        Map<Integer, String> universidades = new HashMap<>();
+        //Asocia claves con valores.
+        //Mo puede tener claves repetidas
+        //Solo puede tener un valor asociado a la clave
+        universidades.put(1,"IPN");
+        universidades.put(2,"UNAM");
+        universidades.put(3,"UAEM");
+        universidades.put(4,"UAM");
+        universidades.put(5,"TESCO");
+        for (Map.Entry<Integer, String> universidad : universidades.entrySet()) {
+            System.out.println("clave=" + universidad.getKey() + ", valor=" + universidad.getValue());
+        }
+
+
     }
 }
