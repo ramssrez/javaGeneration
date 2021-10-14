@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Main {
 
@@ -84,30 +81,46 @@ public class Main {
         }
 
         System.out.println("--------------------------------");
-        System.out.println("Raúl Ramírez Pérez");
+        System.out.println("Uso de arrayList");
 
-        final Set hashSet = new HashSet(1_000_000);
-        final Long startHashSetTime = System.currentTimeMillis();
-        for (int i = 0; i < 1_000_000; i++) {
-            hashSet.add(i);
-        }
-        final Long endHashSetTime = System.currentTimeMillis();
-        System.out.println("Time spent by HashSet: " + (endHashSetTime - startHashSetTime));
+        /*
+        Uso de arraylist
+         */
+        List<String> frutasCuatro = new ArrayList<>();
+        frutasCuatro.add("Mango");
+        frutasCuatro.add("Fresa");
+        frutasCuatro.add("Pera");
+        frutasCuatro.add("Uva");
+        frutasCuatro.add("Melon");
+        frutasCuatro.add("Lima");
+        frutasCuatro.add("Mango");
 
-        final Set treeSet = new TreeSet();
-        final Long startTreeSetTime = System.currentTimeMillis();
-        for (int i = 0; i < 1_000_000; i++) {
-            treeSet.add(i);
+        for (String fruta : frutasCuatro){
+            System.out.println(fruta);
         }
-        final Long endTreeSetTime = System.currentTimeMillis();
-        System.out.println("Time spent by TreeSet: " + (endTreeSetTime - startTreeSetTime));
+        System.out.println("----------------------------");
+        System.out.println(frutasCuatro.get(4));
+        int indice = frutasCuatro.indexOf("Lima");
+        System.out.println(frutasCuatro.get(indice));
 
-        final Set linkedHashSet = new LinkedHashSet(1_000_000);
-        final Long startLinkedHashSetTime = System.currentTimeMillis();
-        for (int i = 0; i < 1_000_000; i++) {
-            linkedHashSet.add(i);
+        System.out.println("--------------------------------");
+        System.out.println("Uso de LinkedList");
+
+        /*
+        Uso de arraylist
+        Listas doblemente enlazadas
+         */
+        List<String> frutasCinco = new LinkedList<>();
+        frutasCinco.add("Mango");
+        frutasCinco.add("Fresa");
+        frutasCinco.add("Pera");
+        frutasCinco.add("Uva");
+        frutasCinco.add("Melon");
+        frutasCinco.add("Lima");
+        frutasCinco.add("Mango");
+        for (String fruta : frutasCinco){
+            System.out.println(fruta);
         }
-        final Long endLinkedHashSetTime = System.currentTimeMillis();
-        System.out.println("Time spent by LinkedHashSet: " + (endLinkedHashSetTime - startLinkedHashSetTime));
+
     }
 }
