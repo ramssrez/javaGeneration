@@ -17,7 +17,7 @@ public class Perro {
         System.out.println("zzzzzzzzzzz");
     }
     public void jugar(){
-        System.out.println("Estoyj ugando");
+        System.out.println("Estoy jugando");
     }
 
     @Override
