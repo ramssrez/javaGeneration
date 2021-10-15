@@ -16,5 +16,12 @@ public class Main {
         perro.comer();
         perro.dormir();
         perro.caracteristicas();
+
+        Perro lomito = new Perro();
+        lomito.name = "Chems";
+        lomito.edad = 1;
+        lomito.size = "Wrande";
+        lomito.raza = "Pikachu";
+        lomito.caracteristicas();
     }
 }
