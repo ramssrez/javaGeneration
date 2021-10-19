@@ -30,4 +30,13 @@ public class CuentaBancaria {
     public void  mostrarSaldo(){
         System.out.println(this.saldo);
     }
+
+    @Override
+    public String toString() {
+        return "CuentaBancaria{" +
+                "nombre='" + nombre + '\'' +
+                ", clave='" + this.clave + '\'' +
+                ", saldo=" + this.saldo +
+                '}';
+    }
 }
