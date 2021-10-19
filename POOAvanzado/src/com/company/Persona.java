@@ -1,10 +1,10 @@
 package com.company;
 
 public class Persona {
-    String nombre;
-    int edad;
+    private String nombre;
+    private int edad;
 
-    void saludar(){
+    private void saludar(){
         System.out.println("Hola");
     }
 }
