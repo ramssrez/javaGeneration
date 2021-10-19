@@ -23,5 +23,7 @@ public class Main {
         lomito.size = "Wrande";
         lomito.raza = "Pikachu";
         lomito.caracteristicas();
+
+        Perro lomito3 = new Perro("Milaneso");
     }
 }
