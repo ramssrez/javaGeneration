@@ -1,2 +1,4 @@
-package com.company.banco;public class CuentaBancaria {
+package com.company.banco;
+
+public class CuentaBancaria {
 }
