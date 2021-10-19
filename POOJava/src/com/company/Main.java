@@ -25,5 +25,8 @@ public class Main {
         lomito.caracteristicas();
 
         Perro lomito3 = new Perro("Milaneso");
+
+        Perro lomito4 = new Perro("Sr. Kawawura","Husky",4,"Gigante");
+        lomito4.caracteristicas();
     }
 }
