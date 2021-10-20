@@ -5,8 +5,27 @@ import com.company.encapsulamieno.Persona;
 import com.company.paquete2.Animal;
 
 public class Main {
+    public static int numerador = 10;
+    public static int denominador = 0;
+    public static float division;
+
 
     public static void main(String[] args) {
+        System.out.println("Antes de hacer la división");
+        try {
+            division = numerador/denominador;
+        }catch (NullPointerException ex){
+            System.out.println(ex.getMessage() + "Null Pointer");
+        }catch (Exception ex){
+            System.out.println(ex.getMessage() + "Exception");
+        }
+        System.out.println("Despues de la división");
+
+
+
+
+
+
 	// write your code here
 //        CuentaBancaria cuenta = new CuentaBancaria();
 //        cuenta.setNombre("Raúl Rampírez");
@@ -16,16 +35,16 @@ public class Main {
 //        cuenta.mostrarSaldo();
 //        System.out.println(cuenta.toString());
 
-        Persona persona = new Persona();
-        persona.setNombre("Raúl Ramírez");
-        persona.setEdad(29);
-        System.out.println("Nombre: " + persona.getNombre() + ", edad: " + persona.getEdad() + ", id: " + persona.getIdPersona());
-        System.out.println(persona.toString());
-
-        Persona persona2 = new Persona();
-        persona2.setNombre("Raúl Ramírez");
-        persona2.setEdad(29);
-        System.out.println(persona2.toString());
+//        Persona persona = new Persona();
+//        persona.setNombre("Raúl Ramírez");
+//        persona.setEdad(29);
+//        System.out.println("Nombre: " + persona.getNombre() + ", edad: " + persona.getEdad() + ", id: " + persona.getIdPersona());
+//        System.out.println(persona.toString());
+//
+//        Persona persona2 = new Persona();
+//        persona2.setNombre("Raúl Ramírez");
+//        persona2.setEdad(29);
+//        System.out.println(persona2.toString());
 
 //        Persona persona = new Persona();
 //        //Persona persona = new Persona();
