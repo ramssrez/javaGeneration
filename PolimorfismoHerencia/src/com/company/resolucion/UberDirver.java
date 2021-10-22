@@ -9,7 +9,7 @@ public class UberDirver {
     private int ratePerMinute = 1;
     private int currentMonthSalary = 0;
 
-    double calculatePrice(double km) {
+    public double calculatePrice(double km) {
         return Math.max(ratePerKm*km,7);
     }
 

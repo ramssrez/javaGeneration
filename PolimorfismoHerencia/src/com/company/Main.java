@@ -2,6 +2,8 @@ package com.company;
 
 import com.company.animales.Ave;
 import com.company.animales.Perro;
+import com.company.resolucion.UberDirver;
+import com.company.resolucion.UberDiverBlack;
 import com.company.uber.UberBlack;
 import com.company.uber.UberDriver;
 
@@ -37,5 +39,13 @@ public class Main {
         UberBlack black = new UberBlack("Jesus", "2021", "KLO125");
         System.out.println(black.calculatePrice(8));
         System.out.println(black.getMinimum());
+
+
+        UberDirver uberDirver = new UberDirver();
+        UberDiverBlack uberDiverBlack = new UberDiverBlack();
+        System.out.println("Uber");
+        System.out.println(uberDirver.calculatePrice(6));
+        System.out.println("UberBlack");
+        System.out.println(uberDiverBlack.calculatePrice(6));
     }
 }
