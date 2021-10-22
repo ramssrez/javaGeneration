@@ -2,7 +2,7 @@ package com.company.animales;
 
 import com.company.animales.Animal;
 
-public class Perro extends Animal implements Mascota{
+public class Perro extends Animal implements Mascota, Mamiferos{
     private int patas;
     private boolean cola;
     private String raza;
@@ -19,12 +19,12 @@ public class Perro extends Animal implements Mascota{
 
     @Override
     public void dormir() {
-
+        System.out.println("Estoy durmiendo");
     }
 
     @Override
     public void hablar() {
-
+        System.out.println("Estoy hablando");
     }
 
     public void ladrar(){
@@ -41,4 +41,18 @@ public class Perro extends Animal implements Mascota{
         System.out.println("Esta respirando el perro");
     }
 
+    @Override
+    public void gestar() {
+        System.out.println("Estoy gestando");
+    }
+
+    @Override
+    public void amamantar() {
+        System.out.println("Estoy tomando leche");
+    }
+
+    @Override
+    public void movilidad() {
+        System.out.println("Estoy moviendome");
+    }
 }
