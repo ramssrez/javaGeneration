@@ -2,7 +2,7 @@ package com.generation.drive;
 
 import java.util.HashMap;
 
-public class DreverManager {
+public class DriversManager {
     private final HashMap<String, Passenger> passengersMap = new HashMap<>();
 
     private final HashMap<String, Driver> driversMap = new HashMap<>();
