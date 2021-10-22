@@ -21,6 +21,15 @@ public class Main {
         }
         System.out.println("Despues de la división");
 
+        /*
+        Muestra cómo se implementó el método findPersonByName.
+Crea una bifurcación y modifícala implementando el método findPersonById en la clase PersonService.
+Crea una segunda bifurcación del código donde agreguen una segunda estructura de datos: HashMap <Person> para encontrar usuarios por ID.
+Sugerencias:
+usa la identificación de persona como clave.
+Deberías usar put en lugar de add.
+https://replit.com/@santiagocarrill/obj-collections
+         */
 
 
 
