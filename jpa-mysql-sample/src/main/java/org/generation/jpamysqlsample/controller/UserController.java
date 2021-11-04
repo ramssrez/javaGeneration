@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @CrossOrigin( "*" )
 @RestController
 public class UserController
@@ -48,6 +50,11 @@ public class UserController
     {
         userService.delete( id );
     }
-
+    
+    @GetMapping( "/user/search/{name}" )
+    public ArrayList<User>  getUserSearch( @PathVariable String name )
+    {
+        return userService.findByName(name);
+    }
 
 }
