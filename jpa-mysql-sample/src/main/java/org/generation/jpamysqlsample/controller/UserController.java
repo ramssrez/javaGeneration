@@ -50,11 +50,17 @@ public class UserController
     {
         userService.delete( id );
     }
-    
+
     @GetMapping( "/user/search/{name}" )
     public ArrayList<User>  getUserSearch( @PathVariable String name )
     {
         return userService.findByName(name);
+    }
+
+    @GetMapping( "/users" )
+    public ArrayList<User>  getUsers()
+    {
+        return userService.findAll();
     }
 
 }

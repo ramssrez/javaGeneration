@@ -16,4 +16,6 @@ public interface UserService
     void delete( String id );
 
     ArrayList<User> findByName(String name);
+
+    ArrayList<User> findAll();
 }

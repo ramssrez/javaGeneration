@@ -7,4 +7,5 @@ import java.util.ArrayList;
 
 public interface UserRepository extends CrudRepository<User, String> {
     ArrayList<User> findByName(String name);
+    ArrayList<User> findAll();
 }
