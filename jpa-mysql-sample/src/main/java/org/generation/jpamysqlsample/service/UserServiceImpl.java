@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUser( String id )
+    public User getUser( Integer id )
     {
         Optional<User> user = userRepository.findById( id );
         return user.orElse( null );
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void delete( String id )
+    public void delete( Integer id )
     {
         userRepository.deleteById( id );
     }

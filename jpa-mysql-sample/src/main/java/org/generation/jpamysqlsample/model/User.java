@@ -1,17 +1,14 @@
 package org.generation.jpamysqlsample.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity(name = "Users")
 public class User
 {
     @Id
-    @GeneratedValue
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     private String name;
 
@@ -24,7 +21,7 @@ public class User
     {
     }
 
-    public User( String name, String id, String lastName )
+    public User( String name, Integer id, String lastName )
     {
         this.name = name;
         this.id = id;
@@ -41,12 +38,12 @@ public class User
         this.name = name;
     }
 
-    public String getId()
+    public Integer getId()
     {
         return id;
     }
 
-    public void setId( String id )
+    public void setId( Integer id )
     {
         this.id = id;
     }

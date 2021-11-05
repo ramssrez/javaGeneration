@@ -9,11 +9,11 @@ import java.util.List;
 public interface UserService
 {
 
-    User getUser( String id );
+    User getUser( Integer id );
 
     User save( User user );
 
-    void delete( String id );
+    void delete( Integer id );
 
     ArrayList<User> findByName(String name);
 

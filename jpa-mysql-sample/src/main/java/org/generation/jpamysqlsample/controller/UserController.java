@@ -17,23 +17,30 @@ import java.util.ArrayList;
 
 @CrossOrigin( "*" )
 @RestController
-public class UserController
-{
+public class UserController{
+
+    private final UserService userService;
 
     public UserController( @Autowired UserService userService )
     {
         this.userService = userService;
     }
 
-    private final UserService userService;
 
     @GetMapping( "/user/{id}" )
-    public User getUser( @PathVariable String id )
+    public User getUser( @PathVariable Integer id )
     {
         return userService.getUser( id );
     }
 
+    @GetMapping( "/user" )
+    public String saludo()
+    {
+        return "Hola";
+    }
+
     @PostMapping( "/user" )
+    //Request obtiene la información de la URL
     public User newUser( @RequestBody User user )
     {
         return userService.save( user );
@@ -46,7 +53,7 @@ public class UserController
     }
 
     @DeleteMapping( "/user/{id}" )
-    public void deleteUser( @PathVariable String id )
+    public void deleteUser( @PathVariable Integer id )
     {
         userService.delete( id );
     }
