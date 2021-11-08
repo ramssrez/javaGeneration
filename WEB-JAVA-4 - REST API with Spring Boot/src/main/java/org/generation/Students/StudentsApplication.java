@@ -12,7 +12,7 @@ import java.util.Calendar;
 public class StudentsApplication
 {
 
-    static StudentService studentService;
+    public static StudentService studentService;
 
     public StudentsApplication( @Autowired StudentService studentService )
     {
