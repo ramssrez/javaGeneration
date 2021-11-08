@@ -10,14 +10,17 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private Long id;
 
     @Column(nullable = false, length = 255)
     private String title;
 
+    //ColumnDefinition, estos campos son de tipo texto para que tengan mas contenido
     @Column(columnDefinition = "text")
     private String content;
 
+    //Notacion de muchos a uno
     @ManyToOne
     @JsonIgnore
     private User user;

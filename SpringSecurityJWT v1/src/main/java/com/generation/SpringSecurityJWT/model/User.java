@@ -18,14 +18,18 @@ public class User {
     @Column(nullable = false, length = 200)
     private String surname;
 
+    //La columna puede estar nula
     @Column(nullable = true, length = 255)
     private String address;
 
+    //Este campo es unico, no se puede registrar con el mismo correo
     @Column(name = "email", unique = true)
     private String username;
 
+    @Column(nullable = false)
     private String password;
 
+    //Uno o muchas publicaciones post, referencia que campo esta conectar
     @OneToMany(mappedBy = "user")
     private List<Post> posts;
 
