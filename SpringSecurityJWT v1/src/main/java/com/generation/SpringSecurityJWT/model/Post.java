@@ -1,6 +1,8 @@
 package com.generation.SpringSecurityJWT.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import javax.persistence.*;
 
@@ -22,7 +24,7 @@ public class Post {
 
     //Notacion de muchos a uno
     @ManyToOne
-    @JsonIgnore
+    @JsonProperty(access = Access.WRITE_ONLY)
     private User user;
 
     public Long getId() {
