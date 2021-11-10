@@ -1,5 +1,7 @@
 package com.generation.SpringSecurityJWT.controller;
 
+import com.generation.SpringSecurityJWT.model.Post;
+import com.generation.SpringSecurityJWT.service.PostService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -42,6 +44,30 @@ class PostControllerTest {
 
         // prueba junit
         assertEquals("helloworld", result);
+    }
+
+    @Test
+    @DisplayName("Pruebas en el post")
+    void postSaveTet(){
+        //Post service per con mockito para modelarlo
+        PostService postService = mock(PostService.class);
+
+        //Creacion del post controller
+        PostController postController = new PostController(postService);
+
+        //Creación del post con elementos
+        Post post = new Post();
+        post.setTitle("Pruebas en JUnit con mockito");
+        post.setContent("Contenido del post");
+
+        //Cuando se salve un post, usa any de tipo post y retorna un post
+        when(postService.save(any(Post.class))).thenReturn(post);
+        //Obtener el resultado del post
+        Post result =postController.save(post);
+        verify(postService, times(1)).save(any(Post.class));
+
+        //Igualación de los resultado sea igual
+        assertEquals(post.getTitle(),  result.getTitle());
     }
 
 }
